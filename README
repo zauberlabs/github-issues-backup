@@ -1,0 +1,7 @@
+GitHub Issues Backup
+===
+
+GitHub Issues Backup allows to backup all issues of all projects for a given organization into a git repository. 
+
+Execute example:
+```ruby backup.rb [folderName]```
