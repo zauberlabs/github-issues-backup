@@ -7,16 +7,23 @@ require 'json'
 user = ""
 password = ""
 
+unless ARGV[0]
+  puts "Usage: #{$O} [folderBackup]"
+  exit
+end
+
+folderBackup = ARGV[0]
+
 client = Octokit::Client.new(:login => user, :password => password)
 
 orgName = 'zauberlabs'
 
-if !File.directory?("issues")
-        Dir.mkdir('issues')
+if !File.directory?(folderBackup)
+        Dir.mkdir(folderBackup)
 end
 
 client.repositories(orgName).each { |repo|
-    dirName = File.join("issues", repo.name)
+    dirName = File.join(folderBackup, repo.name)
     if !File.directory?(dirName)
         Dir.mkdir(dirName)
     end
