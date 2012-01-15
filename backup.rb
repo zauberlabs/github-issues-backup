@@ -7,6 +7,7 @@ include Grit
 
 user = ""
 password = ""
+orgName = ""
 
 unless ARGV[0]
   puts "Usage: #{$O} [folderBackup]"
@@ -16,8 +17,6 @@ end
 folderBackup = ARGV[0]
 
 client = Octokit::Client.new(:login => user, :password => password)
-
-orgName = 'zauberlabs'
 
 if !File.directory?(folderBackup)
     puts "The directory '" + folderBackup + "' doesn't exist"
