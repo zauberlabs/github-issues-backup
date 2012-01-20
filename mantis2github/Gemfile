@@ -1,0 +1,3 @@
+source "http://rubygems.org"
+gem "savon", "~> 0.9.7"
+gem "highline", "~> 1.6.9"
