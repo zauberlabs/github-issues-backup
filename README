@@ -1,7 +1,15 @@
-GitHub Issues Backup
-===
-
+#GitHub Issues Backup
 GitHub Issues Backup allows to backup all issues of all projects for a given organization into a git repository. 
+Source: https://github.com/zauberlabs/github-issues-backup
 
-Execute example:
-```ruby backup.rb [folderName]```
+
+##Installation==
+Thank to http://blogs.law.harvard.edu/hoanga/2006/10/27/fixing-mkmf-load-error-ruby-in-ubuntu/
+
+On debian-based systems
+   sudo aptitude install ruby1.8-dev
+   sudo gem install ocotkit grit
+
+##Usage
+Edit backup.rb, set user and password as your Github username/password, set orgName as the username you want to backup issues from.
+Run `ruby backup.rb /your/backup/directory/`
